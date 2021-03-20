@@ -1,0 +1,35 @@
+.swiper-container.swiper-home-showcase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  div.swiper-slide-image {
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  div.swiper-slide-content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 75px 0;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      border: 1px $white solid;
+    }
+  }
+}
