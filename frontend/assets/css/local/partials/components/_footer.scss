@@ -1,0 +1,18 @@
+footer.footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  div.footer-socials {
+    display: flex;
+    align-items: center;
+
+    a {
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+header.header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  div.header-nav {
+    padding: 5px 0;
+
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 6px 0;
+
+      &.bar2 {
+        width: 20px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  div.header-fast_contacts {
+    display: flex;
+    align-items: center;
+
+    p.header-fast_contracts-email {
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        display: inline-block;
+        content: "";
+        margin: 0 20px;
+        width: 2px;
+        background: black;
+        height: 35px;
+        color: black;
+      }
+    }
+  }
+}
