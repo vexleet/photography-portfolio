@@ -4,6 +4,13 @@ footer.footer {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+  color: $white;
+  pointer-events: none;
+  // TO BE REMOVED
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   div.footer-socials {
     display: flex;
