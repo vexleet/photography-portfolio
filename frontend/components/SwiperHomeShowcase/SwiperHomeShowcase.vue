@@ -8,12 +8,13 @@
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner}`
           }"
         ></div>
-        <!-- <img class="swiper-slide-image" :src="banner" /> -->
+
         <div class="swiper-slide-content">
           <div class="swiper-slide-content-wrapper">
             <h4 class="swiper-slide-wrapper-title">
               Some kind of a title here
             </h4>
+            <!-- TODO: Make it a link -->
             <button class="swiper-slide-wrapper-ctn">Explore Gallery</button>
           </div>
         </div>

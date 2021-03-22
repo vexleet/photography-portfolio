@@ -31,6 +31,28 @@
       justify-content: center;
       border: 1px $white solid;
     }
+
+    h4.swiper-slide-wrapper-title {
+      color: white;
+      font-family: "Satisfy";
+      font-size: 60rem;
+      margin-bottom: 50px;
+    }
+
+    button.swiper-slide-wrapper-ctn {
+      color: white;
+      width: max-content;
+      margin: 0 auto;
+      padding: 15px 25px;
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.05);
+      font-family: "Mukta-ExtraLight";
+      letter-spacing: 2px;
+      transition: background 0.3s ease-in;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
   }
 
   div.swiper-controller {
