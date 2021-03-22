@@ -19,7 +19,11 @@
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-controller">
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev">Prev</div>
+      <div class="swiper-button-next">Next</div>
+    </div>
   </div>
 </template>
 
@@ -32,18 +36,26 @@ export default {
       banners: [
         "https://source.unsplash.com/random/1600x900",
         "https://source.unsplash.com/random/1600x900",
+        "https://source.unsplash.com/random/1600x900",
         "https://source.unsplash.com/random/1600x900"
       ],
       swiperOption: {
+        mousewheel: true,
+        loop: true,
+        speed: 500,
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
         }
       }
     };
   },
   mounted() {
     console.log("Current Swiper instance object", this.mySwiper);
-    this.mySwiper.slideTo(3, 1000, false);
   }
 };
 </script>

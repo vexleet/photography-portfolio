@@ -32,4 +32,68 @@
       border: 1px $white solid;
     }
   }
+
+  div.swiper-controller {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    padding: 20px 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    div.swiper-pagination.swiper-pagination-bullets {
+      bottom: auto;
+      top: auto;
+
+      span.swiper-pagination-bullet {
+        color: $white;
+        background: $white;
+        margin: 0 8px;
+        opacity: 1;
+
+        &-active {
+          color: $black;
+          background: $black;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: $white;
+            position: relative;
+            z-index: -1;
+            border-radius: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    div.swiper-button {
+      &-next,
+      &-prev {
+        bottom: auto;
+        top: auto;
+        height: auto;
+        color: white;
+        text-transform: uppercase;
+        font-size: 15rem;
+        font-family: "Mukta-ExtraLight";
+        margin: 0;
+        position: relative;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }

@@ -13,8 +13,8 @@
     "@nuxtjs/strapi": "^0.3.0",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "swiper": "^6.5.0",
-    "vue-awesome-swiper": "^4.1.1"
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
