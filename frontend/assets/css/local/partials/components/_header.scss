@@ -14,15 +14,15 @@ header.header {
     }
 
     div.header-nav {
-      .bar1 {
+      div.bar1 {
         transform: rotate(-45deg) translate(-5px, 6px);
       }
 
-      .bar2 {
+      div.bar2 {
         width: 0;
       }
 
-      .bar3 {
+      div.bar3 {
         transform: rotate(45deg) translate(-6px, -8px);
       }
     }
