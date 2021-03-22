@@ -6,14 +6,38 @@ header.header {
   align-items: center;
   padding: 20px 0;
 
+  &.nav-opened {
+    div.header-fast_contacts,
+    div.header-nav {
+      position: relative;
+      z-index: 60;
+    }
+
+    div.header-nav {
+      .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .bar2 {
+        width: 0;
+      }
+
+      .bar3 {
+        transform: rotate(45deg) translate(-6px, -8px);
+      }
+    }
+  }
+
   div.header-nav {
     padding: 5px 0;
+    cursor: pointer;
 
     div {
       width: 25px;
       height: 3px;
       background-color: $white;
       margin: 6px 0;
+      transition: all 0.3s ease-in-out;
 
       &.bar2 {
         width: 20px;
