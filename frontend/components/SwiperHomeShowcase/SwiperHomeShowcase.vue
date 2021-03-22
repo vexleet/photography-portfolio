@@ -1,11 +1,15 @@
 <template>
   <div class="swiper-home-showcase" v-swiper:mySwiper="swiperOption">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" :key="banner" v-for="banner in banners">
+      <div
+        class="swiper-slide"
+        :key="banner"
+        v-for="(banner, index) in banners"
+      >
         <div
           class="swiper-slide-image"
           :style="{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner}`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner}?sig=${index}`
           }"
         ></div>
 
