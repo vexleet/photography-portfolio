@@ -1,9 +1,14 @@
 <template>
-  <h1>Hello World</h1>
+  <div class="container">
+    <HeroImage />
+  </div>
 </template>
 
 <script>
-export default {};
+import HeroImage from "../components/HeroImage/HeroImage.vue";
+export default {
+  components: { HeroImage }
+};
 </script>
 
 <style></style>

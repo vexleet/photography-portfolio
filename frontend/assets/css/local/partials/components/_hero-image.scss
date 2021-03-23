@@ -1,0 +1,23 @@
+div.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  div.hero-inner {
+    h1.hero-inner-title {
+      font-size: 75rem;
+      font-family: "Satisfy";
+      color: white;
+    }
+  }
+}
