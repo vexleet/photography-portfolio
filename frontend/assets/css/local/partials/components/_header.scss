@@ -8,14 +8,15 @@ header.header {
 
   &.nav-opened {
     div.header-fast_contacts,
-    div.header-nav {
+    div.header-nav,
+    div.header-get_in_touch {
       position: relative;
       z-index: 60;
     }
 
     div.header-nav {
       div.bar1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
       }
 
       div.bar2 {
@@ -23,7 +24,7 @@ header.header {
       }
 
       div.bar3 {
-        transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px, -7px);
       }
     }
   }
@@ -31,18 +32,38 @@ header.header {
   div.header-nav {
     padding: 5px 0;
     cursor: pointer;
+    height: 43px;
+    width: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: $white;
 
     div {
       width: 25px;
       height: 3px;
-      background-color: $white;
-      margin: 6px 0;
+      background-color: $black;
+      margin: 3px 0;
       transition: all 0.3s ease-in-out;
 
       &.bar2 {
         width: 20px;
         margin-left: auto;
+        margin-right: 9px;
       }
+    }
+  }
+
+  div.header-get_in_touch {
+    button.button-get_in_touch {
+      background: white;
+      font-family: "Mukta-Medium";
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 17px;
     }
   }
 

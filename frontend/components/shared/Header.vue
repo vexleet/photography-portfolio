@@ -6,10 +6,15 @@
       <div class="bar3"></div>
     </div>
     <!-- <div class="header-logo"></div> -->
-    <div class="header-fast_contacts">
+    <div class="header-get_in_touch">
+      <NuxtLink to="/contact">
+        <button class="button-get_in_touch">Get In Touch</button>
+      </NuxtLink>
+    </div>
+    <!-- <div class="header-fast_contacts">
       <p class="header-fast_contracts-email">email@someemail.com</p>
       <p class="header-fast_contracts-phone">+359894522032</p>
-    </div>
+    </div> -->
 
     <NavigationSidebar v-if="navigationOpened" />
   </header>
