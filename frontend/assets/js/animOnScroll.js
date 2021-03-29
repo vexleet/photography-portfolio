@@ -85,11 +85,19 @@ import PhotoSwipeDefaultUI from "photoswipe/dist/photoswipe-ui-default";
     }
   }
 
-  function AnimOnScroll(el, options) {
+  function reloadItems() {
+    this.msnry.reloadItems();
+    this.msnry.layout();
+  }
+
+  function AnimOnScroll(el, spinner, options) {
     this.el = el;
+    this.spinner = spinner;
     this.options = extend(this.defaults, options);
 
     this._onScrollFn = onScrollHandler.bind(this);
+
+    this.reloadItems = reloadItems.bind(this);
 
     this._init();
   }
@@ -157,8 +165,13 @@ import PhotoSwipeDefaultUI from "photoswipe/dist/photoswipe-ui-default";
       this.itemsCount = this.items.length;
       this.itemsRenderedCount = 0;
       this.didScroll = false;
+      // this.spinner = document.querySelector(".lds-spinner");
 
       var self = this;
+
+      if (this.msnry) {
+        this.msnry.destroy();
+      }
 
       imagesLoaded(this.el, function() {
         // initialize masonry
@@ -176,14 +189,15 @@ import PhotoSwipeDefaultUI from "photoswipe/dist/photoswipe-ui-default";
             event.preventDefault();
             const pswp = document.querySelector(".pswp");
             const gallery = new PhotoSwipe(pswp, PhotoSwipeDefaultUI, images, {
-              index
+              index,
+              closeOnScroll: false
             });
 
             gallery.init();
           });
         });
 
-        new Masonry(self.el, {
+        self.msnry = new Masonry(self.el, {
           itemSelector: "li",
           transitionDuration: 0
         });
@@ -206,6 +220,9 @@ import PhotoSwipeDefaultUI from "photoswipe/dist/photoswipe-ui-default";
           },
           false
         );
+
+        self.spinner.classList.remove("show");
+        self.el.classList.remove("loading");
       });
     },
     _scrollPage: function() {
