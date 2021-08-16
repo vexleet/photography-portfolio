@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeroImage />
+    <HeroImage title="Gallery"/>
     <Gallery />
     <PhotoSwipe />
   </div>

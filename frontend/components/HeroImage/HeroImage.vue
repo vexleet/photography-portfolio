@@ -6,7 +6,7 @@
     }"
   >
     <div class="hero-inner">
-      <h1 class="hero-inner-title">Gallery</h1>
+      <h1 class="hero-inner-title">{{title}}</h1>
       <!-- <a href="https://example.com/" class="btn">Go ahead...</a> -->
     </div>
   </div>
@@ -14,6 +14,12 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      required: true,
+      type: String
+    }
+  },
   data() {
     return {
       heroImage: "https://source.unsplash.com/random/1600x900"
