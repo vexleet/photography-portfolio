@@ -5,14 +5,13 @@ header.header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   &.nav-opened {
-    div.header-fast_contacts,
-    div.header-nav,
-    div.header-get_in_touch {
-      position: relative;
-      z-index: 60;
-    }
+    z-index: 60;
 
     div.header-nav {
       div.bar1 {

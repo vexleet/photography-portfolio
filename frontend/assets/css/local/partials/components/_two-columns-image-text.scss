@@ -1,0 +1,23 @@
+div.two-columns-container {
+  max-width: 69em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  padding: 0;
+  margin-top: 20px;
+
+  div.photographer-info {
+    max-width: 45%;
+
+    h3.photographer-info-title {
+      font-family: "Mukta-Bold";
+      font-size: 40px;
+    }
+
+    p.photographer-info-about {
+      font-family: "Mukta-Medium";
+      font-size: 15px;
+    }
+  }
+}

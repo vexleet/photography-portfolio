@@ -1,0 +1,18 @@
+div.gallery-filters {
+  ul.gallery-filters-items {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: #222;
+
+    li.gallery-filter-item {
+      color: #616161;
+      font-size: 22rem;
+      cursor: pointer;
+
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
